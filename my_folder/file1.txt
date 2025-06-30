@@ -1,8 +1,0 @@
-3 apple
-10 banana
-1 apple
-20 cherry
-2 banana
-20 cherry
-3 apple
-2 banana
