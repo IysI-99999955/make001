@@ -1,0 +1,40 @@
+Slack Webhook 설정 가이드
+
+1. Slack 앱 생성
+-------------------
+1) 아래 URL 접속:
+   https://api.slack.com/apps
+
+2) "Create New App" 클릭
+
+3) From scratch 선택 후 앱 이름 및 워크스페이스 선택
+
+4) 앱 생성 완료 후 좌측 메뉴에서 "Incoming Webhooks" 클릭
+
+5) "Activate Incoming Webhooks" → ON
+
+6) 아래로 내려가 "Add New Webhook to Workspace" 클릭
+
+7) 채널 선택 (예: #general) 후 "Allow" 클릭
+
+8) Webhook URL 생성됨 (예: https://hooks.slack.com/services/TXXX/XXXX/XXXXXXXX)
+
+9) 이 URL을 `.sh` 파일 내 `WEBHOOK_URL` 변수에 붙여넣기
+
+예시:
+WEBHOOK_URL="https://hooks.slack.com/services/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"
+
+
+2. Webhook 테스트
+-------------------
+curl로 다음과 같이 실행해 테스트
+
+curl -X POST -H 'Content-type: application/json' \
+--data '{"text":"✅ 슬랙 Webhook 연결 성공"}' \
+https://hooks.slack.com/services/본인_웹훅_URL
+
+3. 기타 참고
+-------------
+- Webhook은 퍼블릭 채널에도 쓸 수 있음
+- 슬랙 워크스페이스마다 권한 필요
+- 메시지 포맷은 JSON 형식, `text`, `blocks` 사용 가능

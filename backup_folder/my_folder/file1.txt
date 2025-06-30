@@ -1,0 +1,7 @@
+echo
+
+"Hello, this is file1.
+This file is for testing.
+Linux is great."
+
+

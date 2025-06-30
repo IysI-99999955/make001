@@ -1,0 +1,3 @@
+Hello, this is file3.
+This is the last test file.
+HELLO, WORLD!

@@ -1,0 +1,2 @@
+[2025-06-21 22:01:12] ERROR: Failed to load config file
+[2025-06-21 22:04:00] ERROR: Database connection lost
